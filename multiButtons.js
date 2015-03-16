@@ -1,6 +1,5 @@
 (function($){
 	$.fn.multiButtons=function(options){
-		console.log(options);
 		if(options!==null&&typeof options==='object'){
 			var settings=$.extend({
 				element:null,

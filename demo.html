@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>multiButtons jQuery plugin</title>
+		<script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/JavaScript" src="multiButtons.js"></script>
+		<style type="text/CSS">
+			div.container {
+				border:2px dashed #666666;
+				font-size:0;
+				margin-bottom:20px;
+			}
+			div.container > div.button {
+				border:3px solid #000;
+				background-color:#ccc;
+				display:inline-block;
+				font-size:14px;
+				padding:5px;
+			}
+			div.container > div.button:hover {
+				background-color:#aaa;
+				cursor:pointer;
+			}
+			div.container > div.button:first-child {
+				border-color:#ff0000;
+			}
+			div.container > div.button:last-child {
+				border-color:#0000ff;
+			}
+			div.container.block > div.button {
+				display:block;
+			}
+			span {
+				font-family:Arial;
+			}
+			span > b.green {
+				color:#00ff00;
+			}
+			span > b.red {
+				color:#ff0000;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/JavaScript">
+			$(document).ready(function(){
+				$('div.container:first').multiButtons('div');
+				$('div.container.block:first').multiButtons({element:'div',type:'VERTICAL'});
+			});
+		</script>
+		<span>MultiButtons <b class="green">on</b></span>
+		<div class="container">
+			<div class="button">First!</div>
+			<div class="button">Second!</div>
+			<div class="button">Third!</div>
+		</div>
+		<span>MultiButtons <b class="red">off</b></span>
+		<div class="container">
+			<div class="button">First!</div>
+			<div class="button">Second!</div>
+			<div class="button">Third!</div>
+		</div>
+		<span>MultiButtons <b class="green">on</b></span>
+		<div class="container block">
+			<div class="button">First!</div>
+			<div class="button">Second!</div>
+			<div class="button">Third!</div>
+		</div>
+		<span>MultiButtons <b class="red">off</b></span>
+		<div class="container block">
+			<div class="button">First!</div>
+			<div class="button">Second!</div>
+			<div class="button">Third!</div>
+		</div>
+	</body>
+</html>
